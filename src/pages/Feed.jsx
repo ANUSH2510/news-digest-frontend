@@ -24,9 +24,16 @@ function Feed() {
         <div style={styles.container}>
             <div style={styles.navbar}>
                 <h2 style={styles.brand}>📰 News Digest</h2>
-                <button style={styles.logoutBtn} onClick={handleLogout}>
-                    Logout
-                </button>
+                <div style={styles.navButtons}>
+                    <button
+                       style={styles.topicsBtn}
+                       onClick={() => navigate('/topics')}>
+                        Change Topics
+                       </button>
+                       <button style={styles.logoutBtn} onClick={handleLogout}>
+                        Logout
+                       </button>
+                </div>       
             </div>
 
             <div style={styles.content}>
@@ -91,12 +98,25 @@ const styles = {
     },
     logoutBtn: {
         padding: '8px 16px',
-        backgroundColor: '#fc8181',
+        backgroundColor: '#e53e3e',
         color: 'white',
         border: 'none',
         borderRadius: '8px',
         cursor: 'pointer',
         fontWeight: 'bold',
+    },
+    navButtons:{
+        display:'flex',
+        gap:'12px',
+    },
+    topicsBtn:{
+        padding:'8px 16px',
+        backgroundColor:'#4299e1',
+        color:'white',
+        border:'none',
+        borderRadius:'8px',
+        cursor:'pointer',
+        fontWeight:'bold',
     },
     content: {
         maxWidth: '900px',
@@ -167,5 +187,6 @@ const styles = {
         textDecoration: 'none',
         fontWeight: '500',
     },
+    
 };
 export default Feed;
