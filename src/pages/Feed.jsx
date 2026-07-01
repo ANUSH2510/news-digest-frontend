@@ -81,42 +81,46 @@ function Feed() {
 const styles = {
     container: {
         minHeight: '100vh',
-        backgroundColor: '#f0f4f8',
+        backgroundColor: '#0f172a',
     },
     navbar: {
-        backgroundColor: 'white',
+        background: 'linear-gradient(135deg, #1e293b, #0f172a)',
         padding: '16px 32px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+        boxShadow: '0 2px 12px rgba(0,0,0,0.3)',
+        borderBottom: '1px solid #334155',
     },
     brand: {
         margin: 0,
         fontSize: '20px',
-        color: '#1a202c',
+        color: '#f1f5f9',
+        fontWeight: 'bold',
     },
-    logoutBtn: {
+    navButtons: {
+        display: 'flex',
+        gap: '12px',
+    },
+    topicsBtn: {
         padding: '8px 16px',
-        backgroundColor: '#e53e3e',
+        background: 'linear-gradient(135deg, #4299e1, #7c3aed)',
         color: 'white',
         border: 'none',
         borderRadius: '8px',
         cursor: 'pointer',
         fontWeight: 'bold',
+        fontSize: '14px',
     },
-    navButtons:{
-        display:'flex',
-        gap:'12px',
-    },
-    topicsBtn:{
-        padding:'8px 16px',
-        backgroundColor:'#4299e1',
-        color:'white',
-        border:'none',
-        borderRadius:'8px',
-        cursor:'pointer',
-        fontWeight:'bold',
+    logoutBtn: {
+        padding: '8px 16px',
+        backgroundColor: '#ef4444',
+        color: 'white',
+        border: 'none',
+        borderRadius: '8px',
+        cursor: 'pointer',
+        fontWeight: 'bold',
+        fontSize: '14px',
     },
     content: {
         maxWidth: '900px',
@@ -125,16 +129,16 @@ const styles = {
     },
     heading: {
         fontSize: '22px',
-        color: '#1a202c',
+        color: '#f1f5f9',
         marginBottom: '24px',
     },
     message: {
-        color: '#718096',
+        color: '#94a3b8',
         textAlign: 'center',
     },
     emptyState: {
         textAlign: 'center',
-        color: '#718096',
+        color: '#94a3b8',
         padding: '60px 0',
     },
     grid: {
@@ -143,18 +147,19 @@ const styles = {
         gap: '20px',
     },
     card: {
-        backgroundColor: 'white',
+        backgroundColor: '#1e293b',
         padding: '24px',
         borderRadius: '12px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
         display: 'flex',
         flexDirection: 'column',
         gap: '12px',
+        border: '1px solid #334155',
     },
     topicBadge: {
         display: 'inline-block',
-        backgroundColor: '#ebf8ff',
-        color: '#2b6cb0',
+        backgroundColor: '#1e40af',
+        color: '#93c5fd',
         padding: '4px 12px',
         borderRadius: '20px',
         fontSize: '12px',
@@ -164,12 +169,12 @@ const styles = {
     articleTitle: {
         margin: 0,
         fontSize: '18px',
-        color: '#1a202c',
+        color: '#f1f5f9',
         fontWeight: '600',
     },
     summary: {
         margin: 0,
-        color: '#4a5568',
+        color: '#94a3b8',
         lineHeight: '1.6',
     },
     footer: {
@@ -179,14 +184,13 @@ const styles = {
     },
     source: {
         fontSize: '12px',
-        color: '#718096',
+        color: '#64748b',
     },
     readMore: {
         fontSize: '14px',
-        color: '#4299e1',
+        color: '#60a5fa',
         textDecoration: 'none',
         fontWeight: '500',
     },
-    
 };
 export default Feed;
