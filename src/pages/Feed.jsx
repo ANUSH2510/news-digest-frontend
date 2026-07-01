@@ -51,7 +51,9 @@ function Feed() {
                 <div style={styles.grid}>
                     {digests.map((digest) => (
                         <div key={digest.id} style={styles.card}>
-                            <div style={styles.topicBadge}>
+                            <div style={{...styles.topicBadge,
+                                  backgroundColor: getTopicColor(digest.article?.topic?.name).bg,
+                                  color: getTopicColor(digest.article?.topic?.name).text,}}>
                                 {digest.article?.topic?.name}
                             </div>
                             <h4 style={styles.articleTitle}>
@@ -77,6 +79,19 @@ function Feed() {
         </div>
     );
 }
+
+const getTopicColor = (topicName) => {
+    const colors = {
+        'Technology': { bg: '#1e3a5f', text: '#60a5fa' },
+        'Business': { bg: '#1c3a2a', text: '#34d399' },
+        'Sports': { bg: '#2d1b4e', text: '#a78bfa' },
+        'Health': { bg: '#3b1f2b', text: '#f472b6' },
+        'Science': { bg: '#1a3a3a', text: '#2dd4bf' },
+        'Entertainment': { bg: '#3b2a1a', text: '#fb923c' },
+        'Politics': { bg: '#3b1a1a', text: '#f87171' },
+    };
+    return colors[topicName] || { bg: '#1e293b', text: '#94a3b8' };
+};
 
 const styles = {
     container: {
